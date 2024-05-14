@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Helmet } from 'react-helmet';
 import { faLocationDot, faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Footer.css';
 import  Logo  from '../../assests/Logo.png';
-
+import { NavLink } from "react-router-dom";
 
 
 
 export const Footer = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
   return (
     <>
       <Helmet>
@@ -38,10 +40,14 @@ export const Footer = () => {
                  <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="/">Home</a>
                 </li>
                 <li>
-                  <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="/services">Services</a>
+                <button onClick={() => window.location.href='/services'} className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" >
+                  Services 
+                </button>
                 </li>
                 <li>
-                  <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="/contact">Contact Us</a>
+                <button onClick={() => window.location.href='/contact'} className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">
+                  Contact Us
+                </button>
                 </li>
               </ul>
             </div>
@@ -49,17 +55,18 @@ export const Footer = () => {
               <span className="block uppercase text-blueGray-500 text-md font-semibold mb-2">Contact</span>
               <ul className="list-unstyled">
                 <li  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">
-                <FontAwesomeIcon icon={faLocationDot} /> 23 BROAD STREET Pl WEYMOUTH, MA 02188
-                                                          
+                <FontAwesomeIcon icon={faLocationDot} /> 23 BROAD STREET Pl WEYMOUTH, MA 02188                                  
                 </li>
                 <li>
-                  <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">
-                  <FontAwesomeIcon icon={faPhone} /> (339) 209-0004
-                    </a>
+                  <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="tel:+13392090004">
+                    <FontAwesomeIcon icon={faPhone} /> (339) 209-0004
+                  </a>
                 </li>
+
                 <li>
-                  <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" >
-                  <FontAwesomeIcon icon={faEnvelope} /> info@paragonfacility.com</a>
+                  <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="mailto:info@paragonfacility.com">
+                    <FontAwesomeIcon icon={faEnvelope} /> info@paragonfacility.com
+                  </a>
                 </li>
                 
               </ul>
