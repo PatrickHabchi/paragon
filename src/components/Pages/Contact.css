@@ -1,0 +1,218 @@
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #334155;
+    background-color: #e2e8f0; 
+    padding: 20px ;
+    max-width: 950px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    box-shadow: 5px 5px 50px;
+    width: 90%;
+  }
+
+  .contact-logo {
+    max-width: 300px; 
+    margin-right: 20px; 
+  }
+
+  .contact-content {
+    width: 100%; 
+    max-width: calc(100% - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+    
+  .contact-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .contact-container h4 {
+    text-align: center;
+    margin-bottom: 30px;
+    transform: translateX(5%);
+    width: 90%;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap
+  }
+
+  .input-group .floating-label-group {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 10px; 
+  }
+
+  .input-group > .floating-label-group:last-child {
+    margin-right: 0; 
+  }
+  
+  .input-group input[type='text'],
+  .input-group input[type='email'] {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #334155;
+    border-radius: 5px;
+    
+  }
+  
+  .contact-form textarea {
+    width: 100%; 
+    height: 150px;
+    overflow: auto; 
+    border: 1px solid #334155;
+    background: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+  }
+
+  .floating-label-group {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s ease all;
+
+  }
+  
+  .floating-label-group input:focus + .floating-label,
+  .floating-label-group input:not(:placeholder-shown) + .floating-label,
+  .floating-label-group textarea:focus + .floating-label,
+  .floating-label-group textarea:not(:placeholder-shown) + .floating-label {
+    top: -15px;
+    font-size: 12px;
+    color: #334155;
+    background-color: #e2e8f0;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .floating-label-group input:focus,
+  .floating-label-group textarea:focus {
+    outline: none;
+  }
+
+  .floating-label-group input[type='text'],
+  .floating-label-group input[type='email'],
+  .floating-label-group textarea {
+    width: 100%; 
+  }
+  
+  .contact-form-button-container {
+    display: flex;
+    justify-content: center; 
+    padding: 10px 0; 
+  }
+  
+  
+  .contact-form button {
+    padding: 10px 15px; 
+    background-color: #33445c;
+    color: #f8f9fa;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+    border: 1px solid transparent;
+  }
+
+  .contact-form-button-container button:hover {
+    background: none; 
+    color: #33445c; 
+    border: 1px solid #33445c;
+}
+
+.contact-form button:hover .Envelope-Icon {
+  color: #33445c;
+  transition: color .3s ease-in-out;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+}
+
+@media (max-width: 865px) {
+
+  .input-group {
+    flex-direction: column; 
+  }
+
+  .input-group input[type='text'],
+  .input-group input[type='email'] {
+    margin-bottom: 5%;
+  }
+
+  .input-group .floating-label-group {
+    margin-right: 0; 
+    margin-top: 5px;
+  }
+
+ }
+
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+  .contact-container h1{
+    font-size: 50px;
+}
+
+  
+  .contact-logo {
+    max-width: 50%;
+    margin: 0 auto 20px; 
+  }
+
+  .contact-content, .contact-form {
+    width: 100%; 
+  }
+
+  .input-group {
+    flex-direction: column; 
+  }
+
+  .input-group input[type='text'],
+  .input-group input[type='email'] {
+    margin-bottom: 5%;
+  }
+
+  .input-group .floating-label-group {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .contact-container h1{
+    font-size: 35px;
+}
+  
+}

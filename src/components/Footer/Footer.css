@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+footer{
+    padding: 0 10px;
+}
+.ftLogo{
+    height: 35px;
+}
